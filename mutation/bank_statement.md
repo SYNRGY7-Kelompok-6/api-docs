@@ -28,7 +28,7 @@
 ```
 {
   "status": "success",
-  "message": "get success",
+  "message": "success getting account info",
   "data": {
         "accountInfo": {
             "accountNo": "string",
