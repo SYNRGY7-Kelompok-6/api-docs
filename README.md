@@ -1,4 +1,4 @@
-# api-contract
+# api-docs
 ## ERD design
 https://drive.google.com/file/d/1zo3b_RoocVAa0az7BkTGI2_SypU0YOGS/view?usp=sharing
 
