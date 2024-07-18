@@ -28,7 +28,33 @@
 ```
 {
   "data": {
-        "accountNo": "string",
+        "accountInfo": {
+            "accountNo": "string",
+            "accountType": "string",
+            "accountCardExp": "string",
+            "name": "string",
+            "accountBalance": {
+                "availableBalance": {
+                  "value": float64,
+                  "currency": "string(3)",
+                },
+                "holdAmount": {
+                  "value": float64,
+                  "currency": "string(3)",
+                },
+            },
+            "accountMonthly": {
+                "monthlyIncome": {
+                    "value": float64,
+                    "currency": "string(3)",
+                },
+                "monthlyOutcome": {
+                  "value": float64,
+                  "currency": "string(3)",
+                },
+            },
+            "pinExpiredTimeLeft": number
+            },
         "balance": {
             "startingBalance": {
                 "value": float64,
@@ -77,13 +103,3 @@
   }
 }
 ```
-#### Description
-|Key               |Description                  |
-|---               |---                          |
-|accountNo         |requested account number     |
-|startingBalance   |starting balance before the first transaction|
-|numberOfEntries   |count debit/credit transaction|
-|endingBalance     |ending balance after llast transaction|
-|remark            |description of the transaction|
-|beneficiaryAccount|will be filled if transaction == DEBIT, if transaction==CREDIT, set beneficiaryAccountNumber and beneficiaryAccountName as ""|
-|sourceAccount     |will be filled if transaction == CREDIT, if transaction==DEBIT, set beneficiaryAccountNumber and beneficiaryAccountName as ""|
