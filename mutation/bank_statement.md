@@ -27,6 +27,8 @@
 #### JSON
 ```
 {
+  "status": "success",
+  "message": "get success",
   "data": {
         "accountInfo": {
             "accountNo": "string",
