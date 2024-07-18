@@ -17,6 +17,8 @@
 #### JSON
 ```
 {
+  "status": "success",
+  "message": "success getting login information",
   "data": {
       "lastSuccessfullLoginAttempt": {
         "timestamp": "string", 
