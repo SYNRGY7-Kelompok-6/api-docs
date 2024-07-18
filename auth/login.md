@@ -18,6 +18,8 @@
 ### Response (200) 
 ```
 {
+  "status": "success",
+  "message": "login success",
   "data": {
     "accessToken": "string"
   }
