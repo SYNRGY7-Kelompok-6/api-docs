@@ -12,14 +12,14 @@
 |---            |---                |---        | ---         |
 |page           |number             |0          | Pagination for detailData |
 |pageSize       |number             |10         | Pagination for detailData |
+|fromDate       |date               |today      | Mutation query            |
+|toDate         |date               |today      | Mutation query            |
 
 ### Request 
 #### JSON
 ```
 {
     "accountNo": "string",
-    "fromDateTime": "string",
-    "toDateTime": "string",
 }
 ```
 
@@ -54,8 +54,8 @@
                 },
             },
             "pinExpiredTimeLeft": number
-            },
-        "balance": {
+         },
+        "accountBalance": {
             "startingBalance": {
                 "value": float64,
                 "currency": "string(3)",
@@ -67,21 +67,7 @@
                 "dateTime": "string|datetime ISO-8601"
             }
         },
-        "totalCreditEntries": {
-            "numberOfEntries": number,
-            "amount": {
-                "value": float64,
-                "currency": "string(3)"
-            }
-        },
-        "totalDebitEntries": {
-            "numberOfEntries": number,
-            "amount": {
-                "value": float64,
-                "currency": "string(3)"
-            }
-        },
-        "detailData": [
+        "mutations": [
             {
                 "amount": {
                     "value": float64,
