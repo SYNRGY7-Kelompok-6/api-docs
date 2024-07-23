@@ -8,9 +8,9 @@
 |Content-Type   |application/json   |           |
 
 ### Request paramenters
-|Key            |Type               |Default    | Description | 
-|---            |---                |---        | ---         |
-|mode           |string             |bright     | QR display mode |
+|Key            |Type      |Option         |Default    | Description | 
+|---            |---       |---            |---        | ---         |
+|mode           |string    |bright, dark   |bright     | QR display mode |
 
 ### Request 
 #### JSON
