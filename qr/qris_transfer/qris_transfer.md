@@ -1,6 +1,6 @@
-# Login Information
+# QRIS Transfer
 
-## /api/v1.0/qr/qr-transfer
+## /api/v1.0/qr/qr-tansfer
 ### Headers
 |Header         |Value              |Description|
 |---            |---                |---        |
@@ -15,7 +15,9 @@
 ### Request 
 #### JSON
 ```
--
+{
+  "amount": "number
+}
 ```
 
 ### Response (200) 
@@ -26,6 +28,7 @@
   "message": "QR code generated successfully",
   "data": {
     "qrImage": "string,
+    "expiresAt": "string"
   }
 }
 ```
@@ -39,6 +42,8 @@
     "username": "string",
     "accountNumber": "string"
   },
+  "amount": "number",
   "type": "QRIS Transfer",
+  "expiresAt": "string|datetime"
 }
 ```
