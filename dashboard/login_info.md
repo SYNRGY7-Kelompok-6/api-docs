@@ -1,6 +1,6 @@
 # Login Information
 
-## /api/v1.0/login-info
+## /api/v1.0/auth/login-info
 ### Headers
 |Header         |Value              |Description|
 |---            |---                |---        |
