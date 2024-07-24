@@ -10,7 +10,7 @@
 ### Request 
 ```
 {
-    "username": "string",
+    "userID": "string",
     "password": "string"
 }
 ```
