@@ -132,21 +132,14 @@
   "message": "success getting account info",
   "data": {
             "transactionId": "string | UUID format",
-            "amount": {
-                "value": float64,
-                "remainingBalance": float64,
-                "currency": "string(3)"
-            },
+            "amount": float64,
             "transactionDate": "string|datetime ISO-8601",
             "remark": "string",
             "type": "string(DEBIT|CREDIT)",
-            "beneficiaryAccount": {
-                "beneficiaryAccountNumber": "string",
-                "beneficiaryAccountName": "string"
-            },
-            "sourceAccount": {
-                "beneficiaryAccountNumber": "string",
-                "beneficiaryAccountName": "string"
-            },
+            "beneficiaryName": "string",
+            "beneficiaryAccountNumber": "string",
+            "sourceName": "string",
+            "sourceAccountNumber": "string"
+    }
 }
 ```

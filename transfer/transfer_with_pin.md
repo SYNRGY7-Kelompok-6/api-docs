@@ -26,6 +26,14 @@
 {
   "status": "success",
   "message": "funds successfully send",
-  "data": null
+  "data": {
+    "transactionId": "string",
+    "amount": float64,
+    "transactionDate": "string|datetime ISO-8601",
+    "beneficiaryAccountNumber": "string",
+    "beneficiaryName": "string",
+    "sourceAccountNumber": "string",
+    "sourceName": "string"
+  }
 }
 ```
