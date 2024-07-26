@@ -1,6 +1,9 @@
-# QRIS Pay
+# QR Transfer
 
-## /api/v1.0/qr/qr-pay
+## /api/v1.0/qr/qr-tansfer
+
+### HTTP Method : `POST`
+
 ### Headers
 |Header         |Value              |Description|
 |---            |---                |---        |
@@ -15,7 +18,12 @@
 ### Request 
 #### JSON
 ```
--
+{
+  "amount": {
+    "value": "number",
+    "currency": "IDR",
+  }
+}
 ```
 
 ### Response (200) 
@@ -25,20 +33,8 @@
   "status": "Success",
   "message": "QR code generated successfully",
   "data": {
-    "qrImage": "string,
+    "qrImage": "string",
+    "expiresAt": "number"
   }
-}
-```
-
-### Inside qrImage data 
-#### JSON
-```
-{ 
-  "beneficiary": {
-    "name": "string"
-    "username": "string",
-    "accountNumber": "string"
-  },
-  "type": "QRIS Pay",
 }
 ```
