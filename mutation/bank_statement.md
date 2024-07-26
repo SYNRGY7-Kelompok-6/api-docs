@@ -1,31 +1,40 @@
 # Bank Statement
 
 ## /api/v1.0/bank-statement
+
+### HTTP Method : `GET`
+
 ### Headers
-|Header         |Value              |Description|
-|---            |---                |---        |
-|Authorization  |Bearer             |jwt token  |
-|Content-Type   |application/json   |           |
+
+| Header        | Value            | Description |
+| ------------- | ---------------- | ----------- |
+| Authorization | Bearer           | jwt token   |
+| Content-Type  | application/json |             |
 
 ### Request parameters
-|Key            |Type               |Default    | Description | 
-|---            |---                |---        | ---         |
-|page           |number             |0          | Pagination for detailData |
-|pageSize       |number             |10         | Pagination for detailData |
-|fromDate       |date               |today      | Mutation query            |
-|toDate         |date               |today      | Mutation query            |
 
-### Request 
+| Key      | Type   | Default | Description               | Parameter |
+| -------- | ------ | ------- | ------------------------- | --------- |
+| page     | number | 0       | Pagination for detailData | query     |
+| pageSize | number | 10      | Pagination for detailData | query     |
+| fromDate | date   | today   | Mutation query            | query     |
+| toDate   | date   | today   | Mutation query            | query     |
+
+### Request
+
 #### JSON
-```
+
+```json
 {
     "accountNo": "string",
 }
 ```
 
-### Response (200) 
+### Response (200)
+
 #### JSON
-```
+
+```json
 {
   "status": "success",
   "message": "success getting account info",
@@ -71,8 +80,10 @@
         },
         "mutations": [
             {
+                "transactionId": "string | UUID format",
                 "amount": {
                     "value": float64,
+                    "remainingBalance": float64,
                     "currency": "string(3)"
                 },
                 "transactionDate": "string|datetime ISO-8601",
@@ -89,5 +100,53 @@
             }
         ]
   }
+}
+```
+
+# Detail Mutation
+
+## /api/v1.0/bank-statement/`:transactionId`/details
+
+### HTTP Method : `GET`
+
+### Headers
+
+| Header        | Value            | Description |
+| ------------- | ---------------- | ----------- |
+| Authorization | Bearer           | jwt token   |
+| Content-Type  | application/json |             |
+
+### Request parameters
+
+| Key           | Type   | required | Description       | Parameter |
+| ------------- | ------ | -------- | -----------       | --------- |
+| transactionID | string | `true`   | transaction ID    | path      |
+
+### Response (200)
+
+#### JSON
+
+```json
+{
+  "status": "success",
+  "message": "success getting account info",
+  "data": {
+            "transactionId": "string | UUID format",
+            "amount": {
+                "value": float64,
+                "remainingBalance": float64,
+                "currency": "string(3)"
+            },
+            "transactionDate": "string|datetime ISO-8601",
+            "remark": "string",
+            "type": "string(DEBIT|CREDIT)",
+            "beneficiaryAccount": {
+                "beneficiaryAccountNumber": "string",
+                "beneficiaryAccountName": "string"
+            },
+            "sourceAccount": {
+                "beneficiaryAccountNumber": "string",
+                "beneficiaryAccountName": "string"
+            },
 }
 ```

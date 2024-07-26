@@ -1,23 +1,19 @@
 # Error response for all condition
 
 ## Type 
-```
+```json
 {
-  "type": "string",
-  "title": "string",
-  "status": number,
-  "detail": "string",
-  "instance": "string"
+  "status": "string",
+  "message": "string",
+  "data": null
 }
 ```
 
 ## Example for 401 (Unauthorized) error
-```
+```json
 {
-  "type": "about:blank",
-  "title": "Unauthorized",
-  "status": 401,
-  "detail": "user not found",
-  "instance": "/api/v1.0/auth/login"
+  "status": "UNAUTHORIZED",
+  "message": "bad credentials",
+  "data": null
 }
 ```

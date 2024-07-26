@@ -1,6 +1,6 @@
-# Login
+# Validate Pin
 
-## /api/v1.0/auth/login
+## /api/v1.0/auth/validate-pin
 
 ### HTTP Method : `POST`
 
@@ -13,8 +13,7 @@
 ### Request 
 ```json
 {
-    "userID": "string",
-    "password": "string"
+    "pin": "string"
 }
 ```
 
@@ -22,9 +21,7 @@
 ```json
 {
   "status": "success",
-  "message": "login success",
-  "data": {
-    "accessToken": "string"
-  }
+  "message": "pin valid",
+  "data": null
 }
 ```

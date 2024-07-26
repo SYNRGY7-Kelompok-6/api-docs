@@ -1,6 +1,6 @@
-# Login
+# Transfer Through The Same Bank Without Pin
 
-## /api/v1.0/auth/login
+## /api/v1.0/transfer
 
 ### HTTP Method : `POST`
 
@@ -13,8 +13,11 @@
 ### Request 
 ```json
 {
-    "userID": "string",
-    "password": "string"
+    "recipientAccountNumber": "string",
+    "recipientAccountName": "string",
+    "amount": float64,
+    "pin": "string"
+
 }
 ```
 
@@ -22,9 +25,7 @@
 ```json
 {
   "status": "success",
-  "message": "login success",
-  "data": {
-    "accessToken": "string"
-  }
+  "message": "funds successfully send",
+  "data": null
 }
 ```
