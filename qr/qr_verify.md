@@ -23,7 +23,7 @@
 #### JSON
 ```
 { 
-  "recipient": {
+  "beneficiary": {
     "name": "string",
     "accountNumber": "string"
   },
@@ -35,7 +35,7 @@
 #### JSON
 ```
 { 
-  "recipient": {
+  "beneficiary": {
     "name": "string",
     "accountNumber": "string"
   },

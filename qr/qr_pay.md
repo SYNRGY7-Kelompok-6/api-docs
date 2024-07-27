@@ -14,7 +14,7 @@
 |Key            |Type      |Option         |Default    | Description | 
 |---            |---       |---            |---        | ---         |
 |mode           |string    |bright, dark   |bright     | QR display mode |
-
+|option         |string    |qr, url        |qr         | QR get image option  |
 
 ### Response (200) 
 #### JSON
