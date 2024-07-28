@@ -23,10 +23,8 @@
 #### JSON
 ```
 { 
-  "beneficiary": {
-    "name": "string",
-    "accountNumber": "string"
-  },
+  "beneficiaryName": "string",
+  "beneficiaryAccountNumber": "string",
   "type": "QRIS Pay",
 }
 ```
@@ -35,10 +33,8 @@
 #### JSON
 ```
 { 
-  "beneficiary": {
-    "name": "string",
-    "accountNumber": "string"
-  },
+  "beneficiaryName": "string",
+  "beneficiaryAccountNumber": "string",
   "amount": {
     "value": "number",
     "currency": "IDR"
