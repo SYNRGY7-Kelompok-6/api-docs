@@ -44,6 +44,7 @@
             "accountType": "string",
             "accountCardExp": "string",
             "name": "string",
+            "cvv": "string(3)",
             "balance": {
                 "availableBalance": {
                   "value": float64,
