@@ -13,10 +13,12 @@
 ### Request 
 ```json
 {
-    "recipientAccountNumber": "string",
-    "recipientAccountName": "string",
-    "amount": float64
-
+    "beneficiaryAccountNumber": "string",
+    "beneficiaryAccountName": "string",
+    "amount": {
+      "value": float64,
+      "currency": "IDR"
+    }
 }
 ```
 
@@ -25,6 +27,14 @@
 {
   "status": "success",
   "message": "funds successfully send",
-  "data": null
+  "data": {
+    "transactionId": "string",
+    "amount": float64,
+    "transactionDate": "string|datetime ISO-8601",
+    "beneficiaryAccountNumber": "string",
+    "beneficiaryName": "string",
+    "sourceAccountNumber": "string",
+    "sourceName": "string"
+  }
 }
 ```

@@ -22,6 +22,8 @@
 {
   "status": "success",
   "message": "pin valid",
-  "data": null
+  "data": {
+    "pinToken": "string"
+  }
 }
 ```

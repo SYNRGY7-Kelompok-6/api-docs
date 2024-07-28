@@ -13,9 +13,12 @@
 ### Request 
 ```json
 {
-    "recipientAccountNumber": "string",
-    "recipientAccountName": "string",
-    "amount": float64,
+    "beneficiaryAccountNumber": "string",
+    "beneficiaryAccountName": "string",
+    "amount": {
+      "value": float64,
+      "currency": "IDR"
+    },
     "pin": "string"
 
 }

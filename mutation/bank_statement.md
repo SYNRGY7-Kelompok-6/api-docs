@@ -44,22 +44,12 @@
             "accountType": "string",
             "accountCardExp": "string",
             "name": "string",
-            "accountBalance": {
+            "balance": {
                 "availableBalance": {
                   "value": float64,
                   "currency": "string(3)",
                 },
                 "holdAmount": {
-                  "value": float64,
-                  "currency": "string(3)",
-                },
-            },
-            "accountMonthly": {
-                "monthlyIncome": {
-                    "value": float64,
-                    "currency": "string(3)",
-                },
-                "monthlyOutcome": {
                   "value": float64,
                   "currency": "string(3)",
                 },
@@ -105,7 +95,7 @@
 
 # Detail Mutation
 
-## /api/v1.0/bank-statement/`:transactionId`/details
+## /api/v1.0/bank-statement/detail
 
 ### HTTP Method : `GET`
 
@@ -118,9 +108,9 @@
 
 ### Request parameters
 
-| Key           | Type   | required | Description       | Parameter |
-| ------------- | ------ | -------- | -----------       | --------- |
-| transactionID | string | `true`   | transaction ID    | path      |
+| Key            | Type   | required | Description       | Parameter |
+| -------------  | ------ | -------- | -----------       | --------- |
+| id_transaction | string | `true`   | transaction ID    | query     |
 
 ### Response (200)
 
@@ -140,6 +130,46 @@
             "beneficiaryAccountNumber": "string",
             "sourceName": "string",
             "sourceAccountNumber": "string"
+    }
+}
+```
+
+# Account Monthly
+
+## /api/v1.0/bank-statement/monthly
+
+### HTTP Method : `GET`
+
+### Headers
+
+| Header        | Value            | Description |
+| ------------- | ---------------- | ----------- |
+| Authorization | Bearer           | jwt token   |
+| Content-Type  | application/json |             |
+
+### Request parameters
+
+| Key      | Type   | Default       | Description            | Parameter |
+| -------- | ------ | ------------  | ---------------------- | --------- |
+| month    | number | currentMonth  | month number from 1-12 | query     |
+
+### Response (200)
+
+#### JSON
+
+```json
+{
+  "status": "success",
+  "message": "success getting account info",
+  "data": {
+        "monthlyIncome": {
+            "value": float64,
+            "currency": "string(3)",
+        },
+        "monthlyOutcome": {
+            "value": float64,
+            "currency": "string(3)",
+        }
     }
 }
 ```

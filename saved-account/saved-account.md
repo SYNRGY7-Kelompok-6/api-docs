@@ -1,6 +1,6 @@
 # Saved Accounts
 
-## /api/v1.0/saved-accounts/
+## /api/v1.0/saved-accounts
 
 ### HTTP Method : `POST`
 
@@ -13,8 +13,7 @@
 ### Request 
 ```json
 {
-    "accountNumber": "string",
-    "accountName": "string
+    "accountNumber": "string"
 }
 ```
 
@@ -27,7 +26,7 @@
 }
 ```
 
-## /api/v1.0/saved-accounts/list
+## /api/v1.0/saved-accounts
 
 ### HTTP Method : `GET`
 
@@ -46,7 +45,8 @@
   "data": [
     {
       "accountNumber": "string",
-      "accountName": "string"
+      "accountName": "string",
+      "favorite": boolean
     },
   ]
 }
@@ -75,7 +75,44 @@
   "message": "accounts has been retrieved successfully",
   "data": {
       "accountNumber": "string",
-      "accountName": "string"
+      "accountName": "string",
+      "favorite": boolean
+    }
+}
+```
+
+## /api/v1.0/saved-accounts/`:accountNumber`
+
+### HTTP Method : `PATCH`
+
+### Headers
+|Header         |Value              |Description|
+|---            |---                |---        |
+|Authorization  |Bearer             |jwt token  |
+|Content-Type   |application/json   |           |
+
+### Request parameters
+
+| Key           | Type   | required | Description     | Parameter |
+| ------------- | ------ | -------- | -----------     | --------- |
+| accountNumber | string | `true`   | account number  | path      |
+
+### Request 
+```json
+{
+    "favorite": boolean
+}
+```
+
+### Response (200) 
+```json
+{
+  "status": "success",
+  "message": "account has been saved to favorite",
+  "data": {
+      "accountNumber": "string",
+      "accountName": "string",
+      "favorite": boolean
     }
 }
 ```
