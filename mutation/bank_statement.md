@@ -85,8 +85,8 @@
                     "beneficiaryAccountName": "string"
                 },
                 "sourceAccount": {
-                    "beneficiaryAccountNumber": "string",
-                    "beneficiaryAccountName": "string"
+                    "sourceAccountNumber": "string",
+                    "sourceAccountName": "string"
                 },
             }
         ]

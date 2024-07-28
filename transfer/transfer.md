@@ -5,20 +5,21 @@
 ### HTTP Method : `POST`
 
 ### Headers
-|Header         |Value              |Description|
-|---            |---                |---        |
-|Authorization  |Bearer             |jwt token  |
-|Content-Type   |application/json   |           |
+|Header         |Value              |Description                          |
+|---            |---                |---                                  |
+|Authorization  |Bearer             |jwt token                            |
+|X-PIN-TOKEN    |pinToken           |pinToken from validate pin endpoint  |
+|Content-Type   |application/json   |                                     |
 
 ### Request 
 ```json
 {
     "beneficiaryAccountNumber": "string",
-    "beneficiaryAccountName": "string",
+    "remark": "string",
     "amount": {
       "value": float64,
       "currency": "IDR"
-    }
+    },
 }
 ```
 
