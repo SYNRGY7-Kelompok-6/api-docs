@@ -13,7 +13,7 @@
 ### Request 
 ```json
 {
-    "accountNumber": "string"
+    "beneficiaryAccountNumber": "string"
 }
 ```
 
@@ -22,7 +22,12 @@
 {
   "status": "success",
   "message": "account has been saved successfully",
-  "data": null
+  "data": {
+      "savedBeneficiaryId": "string",
+      "beneficiaryAccountNumber": "string",
+      "beneficiaryAccountName": "string",
+      "isFavorite": boolean
+    }
 }
 ```
 
@@ -44,15 +49,16 @@
   "message": "accounts has been retrieved successfully",
   "data": [
     {
-      "accountNumber": "string",
-      "accountName": "string",
-      "favorite": boolean
+      "savedBeneficiaryId": "string",
+      "beneficiaryAccountNumber": "string",
+      "beneficiaryAccountName": "string",
+      "isFavorite": boolean
     },
   ]
 }
 ```
 
-## /api/v1.0/saved-accounts/`:accountNumber`
+## /api/v1.0/saved-accounts/`:savedBeneficiaryId`
 
 ### HTTP Method : `GET`
 
@@ -64,9 +70,9 @@
 
 ### Request parameters
 
-| Key           | Type   | required | Description     | Parameter |
-| ------------- | ------ | -------- | -----------     | --------- |
-| accountNumber | string | `true`   | account number  | path      |
+| Key                | Type   | required | Description           | Parameter |
+| -------------      | ------ | -------- | -----------           | --------- |
+| savedBeneficiaryId | string | `true`   | saved beneficiary ID  | path      |
 
 ### Response (200) 
 ```json
@@ -74,14 +80,15 @@
   "status": "success",
   "message": "accounts has been retrieved successfully",
   "data": {
-      "accountNumber": "string",
-      "accountName": "string",
-      "favorite": boolean
+      "savedBeneficiaryId": "string",
+      "beneficiaryAccountNumber": "string",
+      "beneficiaryAccountName": "string",
+      "isFavorite": boolean
     }
 }
 ```
 
-## /api/v1.0/saved-accounts/`:accountNumber`
+## /api/v1.0/saved-accounts/`:savedBeneficiaryId`
 
 ### HTTP Method : `PATCH`
 
@@ -93,14 +100,14 @@
 
 ### Request parameters
 
-| Key           | Type   | required | Description     | Parameter |
-| ------------- | ------ | -------- | -----------     | --------- |
-| accountNumber | string | `true`   | account number  | path      |
+| Key                | Type   | required | Description           | Parameter |
+| -------------      | ------ | -------- | -----------           | --------- |
+| savedBeneficiaryId | string | `true`   | saved beneficiary ID  | path      |
 
 ### Request 
 ```json
 {
-    "favorite": boolean
+    "isFavorite": boolean
 }
 ```
 
@@ -110,9 +117,10 @@
   "status": "success",
   "message": "account has been saved to favorite",
   "data": {
-      "accountNumber": "string",
-      "accountName": "string",
-      "favorite": boolean
+      "savedBeneficiaryId": "string",
+      "beneficiaryAccountNumber": "string",
+      "beneficiaryAccountName": "string",
+      "isFavorite": boolean
     }
 }
 ```
