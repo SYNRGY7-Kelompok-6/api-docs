@@ -25,7 +25,7 @@
 { 
   "beneficiaryName": "string",
   "beneficiaryAccountNumber": "string",
-  "type": "QRIS Pay",
+  "remark": "QRIS Pay",
 }
 ```
 
@@ -39,7 +39,7 @@
     "value": "number",
     "currency": "IDR"
   },
-  "type": "QRIS Transfer",
+  "remark": "QRIS Transfer",
   "expiresAt": "number"
 }
 ```
