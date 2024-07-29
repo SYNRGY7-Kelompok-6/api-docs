@@ -30,7 +30,10 @@
   "message": "funds successfully send",
   "data": {
     "transactionId": "string",
-    "amount": float64,
+    "amount": {
+      "value": float64,
+      "currency": "IDR"
+    },
     "transactionDate": "string|datetime ISO-8601",
     "beneficiaryAccountNumber": "string",
     "beneficiaryName": "string",
