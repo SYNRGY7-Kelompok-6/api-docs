@@ -1,4 +1,4 @@
-# Transfer Through The Same Bank Without Pin
+# Transfer Intra-Bank
 
 ## /api/v1.0/transfer
 
