@@ -20,16 +20,6 @@
 | fromDate | date   | today   | Mutation query            | query     |
 | toDate   | date   | today   | Mutation query            | query     |
 
-### Request
-
-#### JSON
-
-```json
-{
-    "accountNo": "string",
-}
-```
-
 ### Response (200)
 
 #### JSON
@@ -78,7 +68,8 @@
                     "currency": "string(3)"
                 },
                 "transactionDate": "string|datetime ISO-8601",
-                "remark": "string",
+                "remark": "string (Transfer | QRIS)",
+                "desc": "string",
                 "type": "string(DEBIT|CREDIT)",
                 "beneficiaryAccount": {
                     "beneficiaryAccountNumber": "string",
@@ -125,7 +116,8 @@
             "transactionId": "string | UUID format",
             "amount": float64,
             "transactionDate": "string|datetime ISO-8601",
-            "remark": "string",
+            "remark": "string (Transfer | QRIS)",
+            "desc": "string",
             "type": "string(DEBIT|CREDIT)",
             "beneficiaryName": "string",
             "beneficiaryAccountNumber": "string",
