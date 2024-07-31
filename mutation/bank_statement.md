@@ -68,7 +68,7 @@
                     "currency": "string(3)"
                 },
                 "transactionDate": "string|datetime ISO-8601",
-                "remark": "string (Transfer | QRIS)",
+                "remark": "string (Transfer | QRIS Transfer)",
                 "desc": "string",
                 "type": "string(DEBIT|CREDIT)",
                 "beneficiaryAccount": {
@@ -116,7 +116,7 @@
             "transactionId": "string | UUID format",
             "amount": float64,
             "transactionDate": "string|datetime ISO-8601",
-            "remark": "string (Transfer | QRIS)",
+            "remark": "string (Transfer | QRIS Transfer)",
             "desc": "string",
             "type": "string(DEBIT|CREDIT)",
             "beneficiaryName": "string",

@@ -15,7 +15,7 @@
 ```json
 {
     "beneficiaryAccountNumber": "string",
-    "remark": "string (Transfer | QRIS)",
+    "remark": "string (Transfer | QRIS Transfer)",
     "desc": "string",
     "amount": {
       "value": float64,
@@ -36,7 +36,7 @@
       "currency": "IDR"
     },
     "transactionDate": "string|datetime ISO-8601",
-    "remark": "string (Transfer | QRIS)",
+    "remark": "string (Transfer | QRIS Transfer)",
     "desc": "string",
     "beneficiaryAccountNumber": "string",
     "beneficiaryName": "string",
