@@ -5,10 +5,10 @@
 ### HTTP Method : `POST`
 
 ### Headers
-|Header         |Value              |Description|
-|---            |---                |---        |
-|Authorization  |Bearer             |jwt token  |
-|Content-Type   |application/json   |           |
+|Header         |Value              |Description      |
+|---            |---                |---              |
+|Authorization  |Bearer             |jwt token        |
+|Content-Type   |application/json   |                 |
 
 
 ### Request 
@@ -25,7 +25,8 @@
 { 
   "beneficiaryName": "string",
   "beneficiaryAccountNumber": "string",
-  "remark": "QRIS Pay",
+  "remark": "QRIS Transfer",
+  "expiresAt": "number"
 }
 ```
 
@@ -33,13 +34,15 @@
 #### JSON
 ```
 { 
+  "sourceName": "string",
+  "sourceAccountNumber": "string",
   "beneficiaryName": "string",
   "beneficiaryAccountNumber": "string",
   "amount": {
     "value": "number",
     "currency": "IDR"
   },
-  "remark": "QRIS Transfer",
+  "remark": "QRIS Pay",
   "expiresAt": "number"
 }
 ```
